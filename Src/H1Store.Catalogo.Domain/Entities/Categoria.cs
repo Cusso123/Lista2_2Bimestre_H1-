@@ -8,16 +8,15 @@ namespace H1Store.Catalogo.Domain.Entities
 {
 	public class Categoria : EntidadeBase
 	{
-		#region construtor
-		public Categoria( string descricao, bool ativo)
+        public Categoria(string descricao, bool ativo)
+        {
+            Descricao = descricao;
+            Ativo = ativo;
+        }
+        #region construtor
+        public Categoria(Guid codigoid, string descricao, bool ativo)
 		{
-			Descricao = descricao;
-			Ativo = ativo;
-		}
-
-		public Categoria(Guid codigoId, string descricao, bool ativo)
-		{
-			CodigoId = codigoId;
+			CodigoId = codigoid;
 			Descricao = descricao;
 			Ativo = ativo;
 		}

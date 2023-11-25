@@ -13,15 +13,17 @@ namespace H1Store.Catalogo.Domain.Entities
 
 		#region 1 - Contrutores
 
-		public Produto(Guid codigoID, string nome, string descricao, bool ativo, decimal valor, DateTime dataCadastro, int quantidadeEstoque)
+		public Produto(Guid codigoid, string nome, string descricao, bool ativo, decimal valor, DateTime datacadastro, int quantidadeestoque)
 		{
-			CodigoID = codigoID;
+            CodigoID = codigoid;
 			Nome = nome;
 			Descricao = descricao;
 			Ativo = ativo;
 			Valor = valor;
-			DataCadastro = dataCadastro;
-			QuantidadeEstoque = quantidadeEstoque;
+
+			DataCadastro = datacadastro;
+			QuantidadeEstoque = quantidadeestoque;
+
 		}
 
 		#endregion

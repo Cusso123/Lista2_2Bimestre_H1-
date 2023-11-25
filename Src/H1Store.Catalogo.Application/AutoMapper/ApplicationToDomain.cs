@@ -21,10 +21,10 @@ namespace H1Store.Catalogo.Application.AutoMapper
 			   .ConstructUsing(q => new Produto(q.CodigoId,q.Nome, q.Descricao, q.Ativo, q.Valor, q.DataCadastro, q.QuantidadeEstoque));
 
 			CreateMap<FornecedorViewModel, Fornecedor>()
-				.ConstructUsing(f => new Fornecedor(f.CodigoID,f.Nome,f.Cnpj,f.RazaoSocial,f.DataCadastro,f.Ativo));
+				.ConstructUsing(f => new Fornecedor(f.CodigoID,f.Nome,f.CNPJ,f.RazaoSocial,f.DataCadastro,f.Ativo));
 
             CreateMap<NovoFornecedorViewModel, Fornecedor>()
-				.ConstructUsing(f => new Fornecedor(f.CodigoID, f.Nome, f.Cnpj, f.RazaoSocial, f.DataCadastro, f.Ativo));
+				.ConstructUsing(f => new Fornecedor(f.CodigoID, f.Nome, f.CNPJ, f.RazaoSocial, f.DataCadastro, f.Ativo));
 
         }
 	}

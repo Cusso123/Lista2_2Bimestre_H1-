@@ -20,8 +20,8 @@ namespace H1Store.Catalogo.Data.AutoMapper
 			CreateMap<CategoriaCollection, Categoria>()
 			   .ConstructUsing(q => new Categoria(q.CodigoId,  q.Descricao, q.Ativo));
 		
-		CreateMap<FornecedorCollection, Fornecedor>()
-				.ConstructUsing(f => new Fornecedor(f.CodigoId, f.Nome,f.Cnpj, f.RazaoSocial, f.DataCadastro, f.Ativo));
-		}
+			CreateMap<FornecedorCollection, Fornecedor>()
+               .ConstructUsing(f => new Fornecedor(f.CodigoId, f.Nome, f.CNPJ, f.RazaoSocial, f.DataCadastro, f.Ativo));
+        }
 	}
 }

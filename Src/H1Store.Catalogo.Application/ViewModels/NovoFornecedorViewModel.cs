@@ -12,7 +12,7 @@ namespace H1Store.Catalogo.Application.ViewModels
 
         public Guid CodigoID { get; set; }
         public string Nome { get; set; }
-        public string Cnpj { get; set; }
+        public string CNPJ { get; set; }
         public string RazaoSocial { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }

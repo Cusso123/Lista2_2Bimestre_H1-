@@ -11,21 +11,21 @@ namespace H1Store.Catalogo.Domain.Entities
 	{
 		#region Construtor
 
-		public Fornecedor(string nome, string cnpj, string razaoSocial, DateTime dataCadastro, bool ativo)
+		public Fornecedor(string nome, string cnpj, string razaosocial, DateTime datacadastro, bool ativo)
 		{
 			Nome = nome;
-			Cnpj = cnpj;
-			RazaoSocial = razaoSocial;
-			DataCadastro = dataCadastro;
+			CNPJ = cnpj;
+			RazaoSocial = razaosocial;
+			DataCadastro = datacadastro;
 			Ativo = ativo;
 		}
-        public Fornecedor(Guid codigoID,string nome, string cnpj, string razaoSocial, DateTime dataCadastro, bool ativo)
+        public Fornecedor(Guid codigoID,string nome, string cnpj, string razaosocial, DateTime datacadastro, bool ativo)
         {
             CodigoID = codigoID;
             Nome = nome;
-            Cnpj = cnpj;
-            RazaoSocial = razaoSocial;
-            DataCadastro = dataCadastro;
+            CNPJ = cnpj;
+            RazaoSocial = razaosocial;
+            DataCadastro = datacadastro;
             Ativo = ativo;
         }
 
@@ -35,7 +35,7 @@ namespace H1Store.Catalogo.Domain.Entities
 
         public Guid CodigoID { get; private set; }
         public string Nome { get; private set; }
-		public string Cnpj { get; private set; }
+		public string CNPJ { get; private set; }
 		public string RazaoSocial { get; private set; }
 		public DateTime DataCadastro { get; private set; }
 		public bool Ativo { get; private set; }
@@ -51,8 +51,7 @@ namespace H1Store.Catalogo.Domain.Entities
 
 		public void AlterarNome(string nome) => Nome = nome;
 		public void AlterarRazaoSocial(string razaoSocial) => RazaoSocial = razaoSocial;
-		public void AlterarCNPJ(string cnpj) => Cnpj = cnpj;
-
+		public void AlterarCNPJ(string cnpj) => CNPJ = cnpj;
 
 		#endregion
 	}

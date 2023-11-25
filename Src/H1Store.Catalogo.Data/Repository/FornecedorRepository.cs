@@ -33,7 +33,7 @@ namespace H1Store.Catalogo.Data.Repository
             FornecedorCollection fornecedorCollection = new FornecedorCollection();
             fornecedorCollection.CodigoId = fornecedor.CodigoId;
             fornecedorCollection.Nome = fornecedor.Nome;
-            fornecedorCollection.Cnpj = fornecedor.Cnpj;
+            fornecedorCollection.CNPJ = fornecedor.CNPJ;
             fornecedorCollection.RazaoSocial = fornecedor.RazaoSocial;
             fornecedorCollection.DataCadastro = fornecedor.DataCadastro;
             fornecedorCollection.Ativo = fornecedor.Ativo;
@@ -49,7 +49,7 @@ namespace H1Store.Catalogo.Data.Repository
 			if (fornecedorExiste != null)
 			{
 				fornecedorExiste.Nome = fornecedor.Nome;
-				fornecedorExiste.Cnpj = fornecedor.Cnpj;
+				fornecedorExiste.CNPJ = fornecedor.CNPJ;
 				fornecedorExiste.RazaoSocial = fornecedor.RazaoSocial;
 				fornecedorExiste.DataCadastro = fornecedor.DataCadastro;
 
@@ -106,7 +106,8 @@ namespace H1Store.Catalogo.Data.Repository
             List<Fornecedor> lista = new List<Fornecedor>();
             foreach (var item in fornecedorList)
             {
-                lista.Add(new Fornecedor(item.CodigoId, item.Nome, item.Cnpj, item.RazaoSocial, item.DataCadastro, item.Ativo));
+
+                lista.Add(new Fornecedor(item.CodigoId, item.Nome, item.CNPJ, item.RazaoSocial, item.DataCadastro, item.Ativo));
             }
             return lista;
 

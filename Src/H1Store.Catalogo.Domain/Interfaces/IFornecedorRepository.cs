@@ -16,8 +16,8 @@ namespace H1Store.Catalogo.Domain.Interfaces
         public Task Desativar(Fornecedor fornecedor);
 		public Task<Fornecedor> ObterPorId(Guid id);
 		public Task<IEnumerable<Fornecedor>> ObterPorNome(string nomeFornecedor);
-
-	}
+        Task Adicionar(Fornecedor novoFornecedor, object fornecedorCollection);
+    }
 }
 
 
