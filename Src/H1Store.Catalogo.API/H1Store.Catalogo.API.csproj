@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\H1Store.Catalogo.Infra\H1Store.Catalogo.Infra.csproj" />
     <ProjectReference Include="..\H1Store.Catalogo.Application\H1Store.Catalogo.Application.csproj" />
     <ProjectReference Include="..\H1Store.Catalogo.Data\H1Store.Catalogo.Data.csproj" />
   </ItemGroup>

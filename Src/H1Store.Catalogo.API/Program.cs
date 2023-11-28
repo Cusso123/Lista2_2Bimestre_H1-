@@ -8,6 +8,7 @@ using H1Store.Catalogo.Domain.Interfaces;
 using H1Store.Catalogo.Data.Providers.MongoDb.Configuration;
 using Microsoft.Extensions.Options;
 using H1Store.Catalogo.Data.AutoMapper;
+using H1Store.Catalogo.Infra.EmailService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +36,9 @@ builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
        serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
 builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
+
+builder.Services.Configure<EmailConfig>(
+    builder.Configuration.GetSection("EmailConfig"));
 
 var app = builder.Build();
 
