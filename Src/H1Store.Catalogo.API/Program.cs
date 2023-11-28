@@ -36,6 +36,9 @@ builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
 
 builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
 
+builder.Services.Configure<EmailConfig>(
+    builder.Configuration.GetSection("EmailConfig"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
