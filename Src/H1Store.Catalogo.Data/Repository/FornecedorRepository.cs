@@ -112,6 +112,5 @@ namespace H1Store.Catalogo.Data.Repository
             return lista;
 
         }
-
     }
 }
